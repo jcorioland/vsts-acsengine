@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $ACS_API_MODEL
+echo ${ACS_SSH_PUBLIC}
 
 acs-engine generate \
     --api-model ${ACS_API_MODEL} \
