@@ -1,0 +1,31 @@
+{
+    "apiVersion": "vlabs",
+    "properties": {
+      "orchestratorProfile": {
+        "orchestratorType": "Kubernetes",
+        "orchestratorRelease": "1.10"
+      },
+      "masterProfile": {
+        "count": 1,
+        "dnsPrefix": "...",
+        "vmSize": "Standard_D2_v2"
+      },
+      "agentPoolProfiles": [
+        {
+          "count": 1,
+          "name": "pool1",
+          "vmSize": "Standard_D2_v2"
+        }
+      ],
+      "linuxProfile": {
+        "adminUsername": "...",
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "..."
+            }
+          ]
+        }
+      }
+    }
+  }
