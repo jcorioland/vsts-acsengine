@@ -9,8 +9,10 @@ RUN tar -xvf acs-engine-v0.18.1-linux-amd64.tar.gz
 RUN mv acs-engine-v0.18.1-linux-amd64/acs-engine /usr/local/bin/acs-engine
 RUN chmod +x /usr/local/bin/acs-engine
 
-# copy apimodel.json and generate.sh inside the container
-COPY . .
+# copy files inside the container
+COPY apimodel.json apimodel.json
+
+COPY generate.sh generate.sh
 RUN chmod +x generate.sh
 
 # entrypoint

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo $ACS_API_MODEL
+
+docker run \
+    -e ACS_API_MODEL="${ACS_API_MODEL}" \
+    -e SERVICE_PRINCIPAL_CLIENT_ID="${SERVICE_PRINCIPAL_CLIENT_ID}" \
+    -e SERVICE_PRINCIPAL_SECRET="${SERVICE_PRINCIPAL_SECRET}" \
+    -e ACS_SSH_PUBLIC="${ACS_SSH_PUBLIC}" \
+    -e ACS_CLUSTER_ENV="${ACS_CLUSTER_ENV}" \
+    vsts-acs-engine:latest
